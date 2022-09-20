@@ -1,0 +1,82 @@
+GetAllBots - doesnt work
+Win & Loses - doesnt work
+
+test the 'see all bots' button
+test the 'draw' button 
+test choosing a card
+test that it chooses the correct two cards
+test that the right to cards are used in the duel
+test the dual button 
+test the that wins add to the win counter
+test the that loses add to the lose counter
+test the the win total is correct and a running totatl
+test the the lose total is correct and a running total 
+test that the duel outcome is correct
+
+---------------------------
+
+Test Case:
+
+Test (click) the See All Bots 
+
+Description: This test is going to click on the See All Bots button to see if the button pulls up all the bots
+
+Steps:
+1. Open the DuelDuo Hompage
+2. Click see all bots button
+
+Test Postconditions:
+- the entire list (array) of bots should display on screen
+
+Bug Fix:
+- on server.js line 24 .send(botsArr) is incorrect should be .send(bots)
+
+----------------------------
+
+Bug Report
+
+Descripton:
+The losses counter does not update correctly it adds the wins as well.
+Steps to reproduce:
+
+1. Navigate to the DuelDuo Homepage
+2. Click the 'draw' button
+3. Click 'Add to Duo' button for two robot cards
+4. Click 'Duel!' button 
+5. Check to see that you either won or lost
+6. Check the losses counter 
+
+Expected Result
+- If you win the wins counter is +1
+
+Actual Result:
+- If you win the losses counter goes +1
+
+Enviroment:
+- Chrome version 89
+- Windows 10
+
+---------------------------
+
+Bug Report #2
+
+Description:
+The robot display cards with names longer than one line are slightly larger than that of the others when you are Duel post duel.
+
+Steps to Reorduce:
+
+1. Navigate to the DuelDuo Homepage
+2. Click the 'draw' button
+3. Click 'Add to Duo' button to at least one robot with a name that is two rows
+4. Click 'Duel!' button 
+5. Make sure window is wide enough to display the four cards in a row.
+
+Expected Result:
+- the cards to all be the same length even if one team only has single line named robots
+
+Actual Result:
+- If one team has a card with a double line name they are no longer the same size.
+
+Enviroment:
+- Chrome version 89
+- Windows 10
